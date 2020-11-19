@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CSCE4200_Project_2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CSCE4200_Project_2">
+				<Option output="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/CSCE4200_Project_2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 CSCE4200_Project_2"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CSCE4200_Project_2/fast">
+				<Option output="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/CSCE4200_Project_2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 CSCE4200_Project_2/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/file_dictionary.cpp">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/file_dictionary.h">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/file_paths.h">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/indexer.cpp">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/indexer.h">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/main.cpp">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/stemmer.h">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/tokenizer.cpp">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/tokenizer.h">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/word_dictionary.cpp">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/word_dictionary.h">
+			<Option target="CSCE4200_Project_2"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

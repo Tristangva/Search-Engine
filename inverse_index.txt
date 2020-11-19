@@ -1,0 +1,146 @@
+Word 0
+	Doc 0 Freq: 2
+Word 1
+	Doc 0 Freq: 1
+Word 2
+	Doc 0 Freq: 2
+Word 3
+	Doc 0 Freq: 1
+Word 4
+	Doc 0 Freq: 1
+Word 5
+	Doc 0 Freq: 1
+Word 6
+	Doc 0 Freq: 1
+Word 7
+	Doc 0 Freq: 1
+Word 8
+	Doc 0 Freq: 1
+Word 9
+	Doc 0 Freq: 1
+Word 10
+	Doc 0 Freq: 1
+Word 11
+	Doc 0 Freq: 3
+Word 12
+	Doc 0 Freq: 1
+Word 13
+	Doc 0 Freq: 1
+Word 14
+	Doc 0 Freq: 1
+Word 15
+	Doc 0 Freq: 1
+Word 16
+	Doc 0 Freq: 3
+Word 17
+	Doc 0 Freq: 3
+Word 18
+	Doc 0 Freq: 2
+Word 19
+	Doc 0 Freq: 1
+Word 20
+	Doc 0 Freq: 1
+Word 21
+	Doc 0 Freq: 1
+Word 22
+	Doc 0 Freq: 1
+Word 23
+	Doc 0 Freq: 2
+Word 24
+	Doc 0 Freq: 3
+Word 25
+	Doc 0 Freq: 4
+Word 26
+	Doc 0 Freq: 1
+Word 27
+	Doc 0 Freq: 1
+Word 28
+	Doc 0 Freq: 1
+Word 29
+	Doc 0 Freq: 1
+Word 30
+	Doc 0 Freq: 3
+Word 31
+	Doc 0 Freq: 1
+Word 32
+	Doc 0 Freq: 1
+Word 33
+	Doc 0 Freq: 1
+Word 34
+	Doc 0 Freq: 1
+Word 35
+	Doc 0 Freq: 1
+Word 36
+	Doc 0 Freq: 6
+Word 37
+	Doc 0 Freq: 1
+Word 38
+	Doc 0 Freq: 1
+Word 39
+	Doc 0 Freq: 1
+Word 40
+	Doc 0 Freq: 1
+Word 41
+	Doc 0 Freq: 2
+Word 42
+	Doc 0 Freq: 1
+Word 43
+	Doc 0 Freq: 1
+Word 44
+	Doc 0 Freq: 1
+Word 45
+	Doc 0 Freq: 1
+Word 46
+	Doc 0 Freq: 3
+Word 47
+	Doc 0 Freq: 1
+Word 48
+	Doc 0 Freq: 1
+Word 49
+	Doc 0 Freq: 2
+Word 50
+	Doc 0 Freq: 1
+Word 51
+	Doc 0 Freq: 1
+Word 52
+	Doc 0 Freq: 1
+Word 53
+	Doc 0 Freq: 2
+Word 54
+	Doc 0 Freq: 1
+Word 55
+	Doc 0 Freq: 2
+Word 56
+	Doc 0 Freq: 3
+Word 57
+	Doc 0 Freq: 1
+Word 58
+	Doc 0 Freq: 1
+Word 59
+	Doc 0 Freq: 1
+Word 60
+	Doc 0 Freq: 1
+Word 61
+	Doc 0 Freq: 3
+Word 62
+	Doc 0 Freq: 1
+Word 63
+	Doc 0 Freq: 1
+Word 64
+	Doc 0 Freq: 1
+Word 65
+	Doc 0 Freq: 1
+Word 66
+	Doc 0 Freq: 1
+Word 67
+	Doc 0 Freq: 1
+Word 68
+	Doc 0 Freq: 1
+Word 69
+	Doc 0 Freq: 4
+Word 70
+	Doc 0 Freq: 1
+Word 71
+	Doc 0 Freq: 4
+Word 72
+	Doc 0 Freq: 1
