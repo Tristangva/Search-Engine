@@ -7,6 +7,8 @@
 #include <string>
 #include <vector>
 #include <experimental/filesystem>
+#include <ctime>
+#include <chrono>
 
 #include "file_paths.h"
 #include "tokenizer.h"
@@ -17,6 +19,7 @@
 
 using namespace std;
 namespace fs = experimental::filesystem;
+using namespace std::chrono;
 
 struct results{
     int doc;
@@ -41,13 +44,22 @@ int main() {
     //std::vector<std::pair<auto, std::vector<results>>> search_results;
     stops.open(paths.stop_word_list);
     //parses through directory putting files+paths into files vector
+    auto start = high_resolution_clock::now();
     for (const auto &entry : fs::directory_iterator(paths.ft911_directory)) {
         files.push_back(entry.path());
     }
     cout << "Directory files colllected\nTokenizing..." << endl;
-    //Tokenizer is called
+    //Tokenizer is called to make dict
     tokenizer(files, docIn, word_dictionary1, file_dictionary1, forwardIndex, invertedIndex);
+    //indexer tokenizer
+    //one of the worst programming designs I've ever done. I'm sorry to those who see this
+    cout << "Tokenizing again for index" << endl;
+    tokenizer(files, docIn, word_dictionary1, file_dictionary1, forwardIndex, invertedIndex, true);
     //make stopword
+
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<seconds>(stop - start);
+    cout << "Data processing time: " << duration.count() << endl;
     while (stops >> line) {
         stop_words.push_back(line);
     }

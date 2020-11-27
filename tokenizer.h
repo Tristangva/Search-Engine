@@ -32,7 +32,7 @@ bool eleminate_stop_word(string word, vector<string> word_list);
 
 //Toekenizer function
 void tokenizer(vector <string> files, ifstream& fin, word_dictionary& wordDictionary,
-               file_dictionary& fileDictionary, forward_index& forwardIndex, inverted_index& invertedIndex);
+               file_dictionary& fileDictionary, forward_index& forwardIndex, inverted_index& invertedIndex, bool index = false);
 
 
 

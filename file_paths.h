@@ -26,6 +26,8 @@ struct input_files{
     string fwd_index_file = "C:/Users/White/Documents/CSCE4200_Project_3/forward_index.txt";
     //inverted index
     string ivs_index_file = "C:/Users/White/Documents/CSCE4200_Project_3/inverse_index.txt";
+    //vector space output model output
+
 
 };
 

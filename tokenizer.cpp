@@ -92,7 +92,7 @@ bool eleminate_stop_word(string word, vector<string> word_list) {
  * Tokenizer function
  * Brings in vector files, docIn ifstream, and class instance
  */
-void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDictionary, file_dictionary &fileDictionary, forward_index &forwardIndex, inverted_index &invertedIndex) {
+void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDictionary, file_dictionary &fileDictionary, forward_index &forwardIndex, inverted_index &invertedIndex, bool index) {
 
     string line, token, delim, temp, word1, word2; // line from file, tokens, deminitor
     string document_name; //contains doc name
@@ -100,12 +100,13 @@ void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDict
     string temp_doc;
 
     vector <string> collected_tokens; //contains tokens vector
-    vector <string> documents; //contains document titles
+
     ifstream stop_word_in; //used to read in stopwords
     vector <string> stop_words; //contains stopwords
     vector <vector<string>> words_per_doc; //2d vector to include words in document
     vector <string> tempr;
     int  doccount = 0;
+    int l = 0;
     bool firstdoc = true;
     input_files paths;
 
@@ -159,8 +160,11 @@ void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDict
                             word1 = toLowerCase(word1); //makes lowercase
                             if (!isNumber(word1)) {
                                 if(!eleminate_stop_word(word1, stop_words)) {
-                                    collected_tokens.push_back(word1);
-                                    tempr.push_back(word1);
+                                    if (!index) {
+                                        collected_tokens.push_back(word1);
+                                    } else {
+                                        tempr.push_back(word1);
+                                    }
                                 }
                             }
                         }
@@ -170,8 +174,11 @@ void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDict
                         token = toLowerCase(token); //makes lowercase
                         if (!isNumber(token)) {
                             if(!eleminate_stop_word(token, stop_words)) {
-                                collected_tokens.push_back(token);
-                                tempr.push_back(token);
+                                if (!index) {
+                                    collected_tokens.push_back(token);
+                                } else {
+                                    tempr.push_back(token);
+                                }
                             }
                         }
                     }
@@ -179,71 +186,82 @@ void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDict
             }
         }
         docIn.close();
+
+
     }
     if(doccount<=1) {
         words_per_doc.push_back(tempr);
-        tempr.clear();
+        //tempr.clear();
     }
-    fileDictionary.print_dict();
-    //eliminate duplicates from collected_tokens
-    // https://stackoverflow.com/questions/1041620/whats-the-most-efficient-way-to-erase-duplicates-and-sort-a-vector
-    sort(collected_tokens.begin(), collected_tokens.end());
-    collected_tokens.erase(unique(collected_tokens.begin(), collected_tokens.end()), collected_tokens.end());
-    /*
-     * Tokenize list of words to get stemmed form and id
-     * Uses bool fo find out if word is already stemmed to eliminate duplicate stemmed words
-     * If check is not true, then the newly stemmed word is put in dictionary
-     */
-    int j = 0;
-    bool check;
 
-    //make the word list and stem word
-    for (int i = 0; i < collected_tokens.size(); i++) {
-        check = false;
-        word1 = collected_tokens[i];
-        word2 = stem_string(word1); // stem word here
-        //check to see if stemmed word already exists in word dictionary
-        for (auto itr = wordDictionary.word_dict.begin(); itr != wordDictionary.word_dict.end(); ++itr) {
-            if(itr->second == word2) {
-                check = true;
-                break;
+    bool check;
+    if (!index) {
+        fileDictionary.print_dict();
+        files.clear();
+        //eliminate duplicates from collected_tokens
+        // https://stackoverflow.com/questions/1041620/whats-the-most-efficient-way-to-erase-duplicates-and-sort-a-vector
+        sort(collected_tokens.begin(), collected_tokens.end());
+        collected_tokens.erase(unique(collected_tokens.begin(), collected_tokens.end()), collected_tokens.end());
+        /*
+         * Tokenize list of words to get stemmed form and id
+         * Uses bool fo find out if word is already stemmed to eliminate duplicate stemmed words
+         * If check is not true, then the newly stemmed word is put in dictionary
+         */
+
+        //make the word list and stem word
+        for (int i = 0; i < collected_tokens.size(); i++) {
+            check = false;
+            word1 = collected_tokens[i];
+            word2 = stem_string(word1); // stem word here
+            //check to see if stemmed word already exists in word dictionary
+            for (auto itr = wordDictionary.word_dict.begin(); itr != wordDictionary.word_dict.end(); ++itr) {
+                if (itr->second == word2) {
+                    check = true;
+                    break;
+                }
+            }
+            //if not in dictionary, add to dictionary
+            if (!check) {
+                wordDictionary.make_dictionary(word2, l);
+                //cout << i << " " << word2 << endl;
+                l++;
             }
         }
-        //if not in dictionary, add to dictionary
-        if(!check) {
-            wordDictionary.make_dictionary(word2, j);
-            j++;
+        collected_tokens.clear();
+        cout << "Word dict size: " << wordDictionary.word_dict.size() << endl;
+        wordDictionary.print_dict();
+
+        return;
+    } else {
+        files.clear();
+        cout << "Indexing " << words_per_doc.size() << " documents" << endl;
+        auto start = high_resolution_clock::now();
+        for (int i = 0; i < words_per_doc.size(); i++) {
+            sort(words_per_doc.at(i).begin(), words_per_doc.at(i).end());
+            //stem for index
+            for (int j = 0; j < words_per_doc.at(i).size(); j++) {
+                word1 = stem_string(words_per_doc[i][j]);
+                forwardIndex.addDocument(i, word1, wordDictionary);
+            }
+            words_per_doc[i].clear();
         }
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<seconds>(stop - start);
+        cout << "Forward index size: " << forwardIndex.fwd_idx.size() << endl;
+        //get time to compute forward index
+        cout << "Forward Index time: " << duration.count() << endl;
+        forwardIndex.print();
+        cout << "Inverted Index\n";
+        start = high_resolution_clock::now();
+        //make inverted index
+        invertedIndex.addword(wordDictionary, forwardIndex);
+        stop = high_resolution_clock::now();
+        duration = duration_cast<seconds>(stop - start);
+        cout << "Inverted index time: " << duration.count() << endl;
+        cout << "Inverted index size: " << invertedIndex.ivs_idx.size() << endl;
+        cout << "Inverted Index made\n";
+        invertedIndex.print_ivs();
+
+        return;
     }
-    cout << "Word dict size: " << wordDictionary.word_dict.size() << endl;
-    wordDictionary.print_dict();
-
-
-    cout << "Indexing " << words_per_doc.size() << " documents" << endl;
-    auto start = high_resolution_clock::now();
-    for (int i = 0; i < words_per_doc.size(); i++) {
-        sort(words_per_doc.at(i).begin(), words_per_doc.at(i).end());
-        //stem for index
-        for (int j = 0; j < words_per_doc.at(i).size(); j++) {
-            word1 = stem_string(words_per_doc[i][j]);
-            forwardIndex.addDocument(i, word1, wordDictionary);
-        }
-    }
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<seconds>(stop - start);
-    cout << "Forward index size: "<< forwardIndex.fwd_idx.size() << endl;
-    //get time to compute forward index
-    cout << "Forward Index time: " << duration.count() << endl;
-    forwardIndex.print();
-    cout << "Inverted Index\n";
-    start = high_resolution_clock::now();
-    //make inverted index
-    invertedIndex.addword(wordDictionary, forwardIndex);
-    stop = high_resolution_clock::now();
-    duration = duration_cast<seconds>(stop - start);
-    cout << "Inverted index time: " << duration.count() << endl;
-    cout << "Inverted index size: " << invertedIndex.ivs_idx.size() << endl;
-    cout << "Inverted Index made\n";
-    invertedIndex.print_ivs();
-
 }
