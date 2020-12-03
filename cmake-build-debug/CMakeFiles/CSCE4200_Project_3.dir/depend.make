@@ -18,8 +18,17 @@ CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o: ../file_dictionary.h
 CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o: ../file_paths.h
 CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o: ../indexer.h
 CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o: ../main.cpp
+CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o: ../query_processor.h
 CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o: ../tokenizer.h
 CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o: ../word_dictionary.h
+
+CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o: ../file_dictionary.h
+CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o: ../file_paths.h
+CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o: ../indexer.h
+CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o: ../query_processor.cpp
+CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o: ../query_processor.h
+CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o: ../tokenizer.h
+CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o: ../word_dictionary.h
 
 CMakeFiles/CSCE4200_Project_3.dir/tokenizer.cpp.o: ../file_dictionary.h
 CMakeFiles/CSCE4200_Project_3.dir/tokenizer.cpp.o: ../file_paths.h

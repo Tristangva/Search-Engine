@@ -204,6 +204,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CSCE4200_Project_3.dir/build.make CMakeFiles/CSCE4200_Project_3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+query_processor.o: query_processor.cpp.o
+
+.PHONY : query_processor.o
+
+# target to build an object file
+query_processor.cpp.o:
+	$(MAKE) -f CMakeFiles/CSCE4200_Project_3.dir/build.make CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o
+.PHONY : query_processor.cpp.o
+
+query_processor.i: query_processor.cpp.i
+
+.PHONY : query_processor.i
+
+# target to preprocess a source file
+query_processor.cpp.i:
+	$(MAKE) -f CMakeFiles/CSCE4200_Project_3.dir/build.make CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.i
+.PHONY : query_processor.cpp.i
+
+query_processor.s: query_processor.cpp.s
+
+.PHONY : query_processor.s
+
+# target to generate assembly for a file
+query_processor.cpp.s:
+	$(MAKE) -f CMakeFiles/CSCE4200_Project_3.dir/build.make CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.s
+.PHONY : query_processor.cpp.s
+
 tokenizer.o: tokenizer.cpp.o
 
 .PHONY : tokenizer.o
@@ -276,6 +303,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... query_processor.o"
+	@echo "... query_processor.i"
+	@echo "... query_processor.s"
 	@echo "... tokenizer.o"
 	@echo "... tokenizer.i"
 	@echo "... tokenizer.s"

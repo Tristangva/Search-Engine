@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/CSCE4200_Project_3.dir/word_dictionary.cpp.o"
   "CMakeFiles/CSCE4200_Project_3.dir/file_dictionary.cpp.o"
   "CMakeFiles/CSCE4200_Project_3.dir/indexer.cpp.o"
+  "CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o"
   "CSCE4200_Project_3.pdb"
   "CSCE4200_Project_3.exe"
   "libCSCE4200_Project_3.dll.a"

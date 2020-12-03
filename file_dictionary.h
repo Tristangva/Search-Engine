@@ -17,9 +17,10 @@
 class file_dictionary {
 private:
     //Makes unordered map
-    std::map <int,std::string> file_dict;
+
 
 public:
+    std::map <int,std::string> file_dict;
     //generates unique id
     //Prints to file
     int return_key(std::string document);

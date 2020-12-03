@@ -15,6 +15,7 @@
 #include "file_dictionary.h"
 #include "word_dictionary.h"
 #include "indexer.h"
+#include "query_processor.h"
 
 
 using namespace std;
@@ -55,14 +56,18 @@ int main() {
     //one of the worst programming designs I've ever done. I'm sorry to those who see this
     cout << "Tokenizing again for index" << endl;
     tokenizer(files, docIn, word_dictionary1, file_dictionary1, forwardIndex, invertedIndex, true);
-    //make stopword
 
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<seconds>(stop - start);
     cout << "Data processing time: " << duration.count() << endl;
+
+    //make stopword
     while (stops >> line) {
         stop_words.push_back(line);
     }
+    //begin query
+    cout << "Processing queries\n";
+    query_processor(file_dictionary1, word_dictionary1, forwardIndex, invertedIndex);
     //bare search function
     while (input != "exit!") {
         cout << "Enter in word to return. type \"exit!\" to return" << endl;

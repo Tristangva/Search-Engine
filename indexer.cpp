@@ -51,6 +51,7 @@ void forward_index::addDocument(int doc, std::string word, word_dictionary& word
     fwd_idx.push_back(temp);
 }
 
+//grab forward index frequency
 
 void forward_index::print() {
     //Print
@@ -93,6 +94,7 @@ void inverted_index::addword(word_dictionary wordDictionary,  forward_index forw
     }
 }
 
+//grab frequency of inverted index
 
 void inverted_index::print_ivs() {
     input_files path;

@@ -98,6 +98,12 @@
 		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/main.cpp">
 			<Option target="CSCE4200_Project_3"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/query_processor.cpp">
+			<Option target="CSCE4200_Project_3"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/query_processor.h">
+			<Option target="CSCE4200_Project_3"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/stemmer.h">
 			<Option target="CSCE4200_Project_3"/>
 		</Unit>

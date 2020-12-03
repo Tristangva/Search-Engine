@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/file_dictionary.cpp" "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/file_dictionary.cpp.o"
   "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/indexer.cpp" "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/indexer.cpp.o"
   "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/main.cpp" "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o"
+  "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/query_processor.cpp" "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o"
   "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/tokenizer.cpp" "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/tokenizer.cpp.o"
   "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/word_dictionary.cpp" "/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/word_dictionary.cpp.o"
   )

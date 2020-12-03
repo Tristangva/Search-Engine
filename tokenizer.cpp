@@ -66,7 +66,7 @@ string DocName(string line) {
 }
 
 string stem_string(string word_name) {
-    char *temp;
+    char temp[word_name.size()];
     int stemmed_size;
 
 
@@ -197,7 +197,7 @@ void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDict
     bool check;
     if (!index) {
         fileDictionary.print_dict();
-        files.clear();
+        //files.clear();
         //eliminate duplicates from collected_tokens
         // https://stackoverflow.com/questions/1041620/whats-the-most-efficient-way-to-erase-duplicates-and-sort-a-vector
         sort(collected_tokens.begin(), collected_tokens.end());
@@ -233,7 +233,7 @@ void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDict
 
         return;
     } else {
-        files.clear();
+        //files.clear();
         cout << "Indexing " << words_per_doc.size() << " documents" << endl;
         auto start = high_resolution_clock::now();
         for (int i = 0; i < words_per_doc.size(); i++) {
@@ -257,6 +257,7 @@ void tokenizer(vector <string> files, ifstream& docIn, word_dictionary &wordDict
         invertedIndex.addword(wordDictionary, forwardIndex);
         stop = high_resolution_clock::now();
         duration = duration_cast<seconds>(stop - start);
+        words_per_doc.clear();
         cout << "Inverted index time: " << duration.count() << endl;
         cout << "Inverted index size: " << invertedIndex.ivs_idx.size() << endl;
         cout << "Inverted Index made\n";
