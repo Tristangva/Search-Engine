@@ -31,7 +31,7 @@ struct input_files{
     //main.qrels
     string main_qrels = "C:/Users/White/Documents/CSCE4200_Project_3/main.qrels";
     //outputs of query
-
+    string query_output = "C:/Users/White/Documents/CSCE4200_Project_3/vsm_output.txt";
 
 };
 

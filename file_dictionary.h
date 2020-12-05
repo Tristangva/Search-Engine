@@ -25,7 +25,7 @@ public:
     //Prints to file
     int return_key(std::string document);
     void make_file_dict(std::string document, int docNum);
-
+    void retrieve_dict();
     //print function. To be made later
     void print_dict();
 };

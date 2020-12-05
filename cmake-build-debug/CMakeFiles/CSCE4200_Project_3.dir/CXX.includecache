@@ -42,9 +42,13 @@ string
 
 /cygdrive/c/Users/White/Documents/CSCE4200_Project_3/indexer.cpp
 iostream
-/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/iostream
+-
 string
-/cygdrive/c/Users/White/Documents/CSCE4200_Project_3/string
+-
+sstream
+-
+fstream
+-
 vector
 -
 list

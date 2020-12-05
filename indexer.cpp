@@ -1,8 +1,10 @@
 //
 // Created by White on 11/5/2020.
 //
-#include "iostream"
-#include "string"
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <fstream>
 #include <vector>
 #include <list>
 #include <algorithm>
@@ -51,7 +53,67 @@ void forward_index::addDocument(int doc, std::string word, word_dictionary& word
     fwd_idx.push_back(temp);
 }
 
-//grab forward index frequency
+
+void forward_index::retrive_dict() {
+    ifstream fin;
+    input_files paths;
+    struct forward_list_node new_word{};
+    string line, word, freq, doc = "doc #", docNum, token, check = "\tWord id: ";
+    fin.open(paths.fwd_index_file);
+
+    while (!fin.eof()) {
+        getline(fin, line);
+        //cout << line << endl;
+        if (line.find(doc) == string::npos ) {
+//            istringstream split(line);
+//            //while (!split.eof()) {
+//                getline(split, token, '#');
+//                getline(split,docNum); //doc number
+//            cout << "check" << endl;
+            //}
+            vector<forward_list_node> temp;
+            while(!fin.eof()) {
+                getline(fin, line);
+                //cout << line << endl;
+                //vector<forward_list_node> temp;
+                if (line.find(check) != string::npos) {
+                    istringstream split(line);
+                    getline(split, token, ':');
+
+                    if (token.front() == ' ') {
+                        token.erase(token.begin());
+                    }
+                    getline(split, token, ':');
+                    getline(split, word);
+                    getline(split, token, ' ');
+
+                    if (token.front() == ' ') {
+                        token.erase(token.begin());
+                    }
+
+                    freq = token;
+
+                    new_word.word = stoi(word);
+                    new_word.word_freq = stoi(freq);
+                    temp.push_back(new_word);
+
+                }
+                if(line == "--------------") {
+                    fwd_idx.push_back(temp);
+                    temp.clear();
+                }
+            }
+        }
+
+    }
+//    for (int i = 0; i < fwd_idx.size(); ++i) {
+//        cout << "Doc #" << i << endl;
+//        for (int j = 0; j < fwd_idx[i].size(); ++j) {
+//            cout << "\tWord id: " << fwd_idx[i][j].word << " Frequency: " << fwd_idx[i][j].word_freq << endl;
+//        }
+//        //fout << "--------------" << endl; //for parsing later
+//    }
+}
 
 void forward_index::print() {
     //Print
@@ -63,6 +125,7 @@ void forward_index::print() {
         for (int j = 0; j < fwd_idx[i].size(); ++j) {
             fout << "\tWord id: " << fwd_idx[i][j].word << " Frequency: " << fwd_idx[i][j].word_freq << endl;
         }
+        fout << "--------------" << endl; //for parsing later
     }
 }
 
@@ -94,6 +157,50 @@ void inverted_index::addword(word_dictionary wordDictionary,  forward_index forw
     }
 }
 
+void inverted_index::retrive_dict() {
+
+    input_files path;
+    invert_node node{};
+    string word, doc, freq, line, token, wordCheck = "Word", docCheck = "\tDoc", freqCheck = " Freq:";
+    ifstream fin;
+    fin.open((path.ivs_index_file));
+    vector<invert_node> temp;
+    while (!fin.eof()) {
+        getline(fin, line);
+        if(line.find(wordCheck) != string::npos) {
+            istringstream split(line);
+            getline(split, token, ' ');
+            getline(split, word);
+            //cout << word << endl;
+        }
+        if(line.find(docCheck) != string::npos) {
+            istringstream split(line);
+            getline(split, token, ' ');
+            getline(split, doc, ' ');
+            getline(split, token, ' ');
+            getline(split, freq);
+            //cout << doc << " " << freq << endl;
+            node.doc = stoi(doc);
+            node.freq = stoi(freq);
+            temp.push_back(node);
+        }
+        if(line == "--------------") {
+            ivs_idx.push_back(make_pair(stoi(word), temp));
+            temp.clear();
+        }
+
+
+    }
+//    for (int i = 0; i < ivs_idx.size(); i++) {
+//        cout << "Word " << ivs_idx[i].first << endl;
+//        for (int j = 0; j < ivs_idx[i].second.size(); ++j) {
+//            cout << "\tDoc " << ivs_idx[i].second[j].doc << " Freq: " << ivs_idx[i].second[j].freq << endl;
+//        }
+//        //fout << "--------------" << endl; //for parsing later
+//    }
+
+}
+
 //grab frequency of inverted index
 
 void inverted_index::print_ivs() {
@@ -106,6 +213,7 @@ void inverted_index::print_ivs() {
         for (int j = 0; j < ivs_idx[i].second.size(); ++j) {
             fout << "\tDoc " << ivs_idx[i].second[j].doc << " Freq: " << ivs_idx[i].second[j].freq << endl;
         }
+        fout << "--------------" << endl; //for parsing later
     }
 }
 

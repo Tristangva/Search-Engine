@@ -30,6 +30,19 @@ int file_dictionary::return_key(std::string document) {
 
 }
 
+void file_dictionary::retrieve_dict() {
+    ifstream fin;
+    input_files paths;
+    string line, name, num;
+    fin.open(paths.file_dict);
+
+    while (!fin.eof()) {
+        getline(fin, name, ' ');
+        getline(fin, num);
+        file_dict.insert({stoi(num), name});
+    }
+}
+
 void file_dictionary::print_dict() {
 
     // Enter in parser_output.txt path

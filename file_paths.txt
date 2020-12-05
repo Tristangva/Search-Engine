@@ -1,8 +1,0 @@
-#Ignores #'s
-#each file path is read in
-#Directory path modfy below
-C:/Users/White/Documents/CSCE4200 Project 1/ft911/
-#stopwords modify below
-C:/Users/White/Documents/CSCE4200 Project 1/stopwordlist.txt
-#parser output modify below
-C:/Users/White/Documents/CSCE4200 Project 1/parser_output.txt

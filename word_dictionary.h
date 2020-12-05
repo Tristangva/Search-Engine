@@ -20,6 +20,8 @@ public:
     //make dictionary
     void make_dictionary(std::string word, int doc_num);
 
+    void retrieve_dict();
+
     //print
     void print_dict();
 

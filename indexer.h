@@ -29,6 +29,8 @@ public:
     void addNode(int doc, int word, word_dictionary& wordDictionary, forward_list_node new_word);
     //new document
     void addDocument(int doc, std::string word, word_dictionary& wordDictionary);
+
+    void retrive_dict();
     //print
     void print();
 
@@ -41,11 +43,16 @@ public:
 
 class inverted_index : forward_index{
 public:
+
     //make inverted index
     void addword(word_dictionary wordDictionary, forward_index forwardIndex);
+
+    void retrive_dict();
+
     //int word num, vector of structs
-    std::vector<std::pair<int, std::vector<invert_node>>> ivs_idx;
     void print_ivs();
+
+    std::vector<std::pair<int, std::vector<invert_node>>> ivs_idx;
 };
 
 #endif //CSCE4200_PROJECT_2_INDEXER_H

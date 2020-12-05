@@ -34,6 +34,19 @@ void word_dictionary::make_dictionary(string word_name, int doc_num) {
 }
 
 
+void word_dictionary::retrieve_dict() {
+    ifstream fin;
+    input_files paths;
+    string line, word, num;
+    fin.open(paths.word_dict);
+
+    while (!fin.eof()) {
+        getline(fin, word, ' ');
+        getline(fin, num);
+        word_dict.insert({stoi(num), word});
+    }
+}
+
 void word_dictionary::print_dict() {
     ofstream fout;
     input_files paths;

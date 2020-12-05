@@ -28,16 +28,16 @@ struct processed_queries {
     double cosine;
 };
 
+void print_queries();
 
 //cosine similarity
-void cosine_similarities(vector<string> terms,  int N, inverted_index invertedIndex, forward_index forwardIndex, file_dictionary fileDictionary, word_dictionary word_dictionary);
+void cosine_similarities(vector<string> terms, int topic, ofstream& fout, int N, inverted_index invertedIndex, forward_index forwardIndex, file_dictionary fileDictionary, word_dictionary word_dictionary);
 
 
 void topics_file_reader();
 
-void index_retrieval(std::vector<std::string> words, file_dictionary fileDictionary, word_dictionary wordDictionary,inverted_index invertedIndex, forward_index forwardIndex);
 
-void query_processor(file_dictionary fileDictionary, word_dictionary wordDictionary, forward_index forwardIndex, inverted_index invertedIndex, bool manual = true);
+void query_processor(file_dictionary fileDictionary, word_dictionary wordDictionary, forward_index forwardIndex, inverted_index invertedIndex);
 
 
 #endif //CSCE4200_PROJECT_3_QUERY_PROCESSOR_H

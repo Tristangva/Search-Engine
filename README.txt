@@ -4,8 +4,8 @@ Contact: tristanwhite@my.unt.edu tristanwhite.gva@gmail.com Canvas
 NOTE: This program was created with CLION which is free with a .edu email
 
 To run:
-Put all files in zip in a directory.
-
+Put all files in zip in a directory. Keep folders in zip in folders and put them in dir.
+Given Files are just from assignment
 compile with gcc or g++
 
 Ensure c++17 is installed
@@ -15,17 +15,22 @@ use -std=c++17 or -std=gnu++17 to compile
 (-stdc++fs maybe not as it is already in the CMakeLists.txt)
 
 CMakeLists.txt is crutial to run the program
-CSCE4200 inside the CMakeLists.txt fuke us tge target and executable
+as CMakeLists.txt make us the target and executable
 
 To include the files needed, go to file_paths.h and enter int the file paths on the respective string
 
-For the ft911 directory, only ft011_1, ft011_2, and ft011_3, are able to be read in presently
-I have no idea why this is and had no time to fix.
 
+Run the program and press '2' to tokenize and index the files and after this is done,
+Run the program again and press '1' to run the query search
 
-Run the program to tokenize and index the files and after this is done,
-the program will prompt the user to enter in a word to find.
-The program will return the the docs that the closest words are found in.
+If the files forward_index.txt, inverse_index.txt, file_dict.txt, word_dict.txt exist,
+you can immediately go towards 2 as long as they are in correct format
+
+If pressed 1 initially, you will have to chose 1 or 2 for the different query formats
+1 for just "title" 2 for "title" and "desc". I had no time to incorporate
+
+To compare the results, you will have to see what documents in the main.grels are deemed relevent, and
+compare them to the displayed results. You can also go to the retrieved documents
 
 
 If you have any questions, contact me.

@@ -22,10 +22,6 @@ using namespace std;
 namespace fs = experimental::filesystem;
 using namespace std::chrono;
 
-struct results{
-    int doc;
-    int freq;
-};
 
 int main() {
     //Enter path containing directory with to be parsed files
@@ -41,60 +37,42 @@ int main() {
     forward_index forwardIndex;
     inverted_index invertedIndex;
 
-    results returned_result;
-    //std::vector<std::pair<auto, std::vector<results>>> search_results;
-    stops.open(paths.stop_word_list);
-    //parses through directory putting files+paths into files vector
-    auto start = high_resolution_clock::now();
-    for (const auto &entry : fs::directory_iterator(paths.ft911_directory)) {
-        files.push_back(entry.path());
-    }
-    cout << "Directory files colllected\nTokenizing..." << endl;
-    //Tokenizer is called to make dict
-    tokenizer(files, docIn, word_dictionary1, file_dictionary1, forwardIndex, invertedIndex);
-    //indexer tokenizer
-    //one of the worst programming designs I've ever done. I'm sorry to those who see this
-    cout << "Tokenizing again for index" << endl;
-    tokenizer(files, docIn, word_dictionary1, file_dictionary1, forwardIndex, invertedIndex, true);
+    cout << "Welcome to search engine!\nPress 1 for search\nPress 2 to tokenize and index docs\n";
+    cin >> option;
 
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<seconds>(stop - start);
-    cout << "Data processing time: " << duration.count() << endl;
-
-    //make stopword
-    while (stops >> line) {
-        stop_words.push_back(line);
-    }
-    //begin query
-    cout << "Processing queries\n";
-    query_processor(file_dictionary1, word_dictionary1, forwardIndex, invertedIndex);
-    //bare search function
-    while (input != "exit!") {
-        cout << "Enter in word to return. type \"exit!\" to return" << endl;
-        getline(cin, input); //user input
-        bool check = false;
-        if (input == "exit!") { continue;}
-        //checks if stopword
-        for (int i = 0; i < stop_words.size(); ++i) {
-            if(stop_words[i] == input) {
-                check = true;
-                break;
-            }
+    if (option == '2') {
+        //parses through directory putting files+paths into files vector
+        auto start = high_resolution_clock::now();
+        for (const auto &entry : fs::directory_iterator(paths.ft911_directory)) {
+            files.push_back(entry.path());
         }
-        if(check) {continue;} //restart if stop word
+        cout << "Directory files colllected\nTokenizing..." << endl;
+        //Tokenizer is called to make dict
+        tokenizer(files, docIn, word_dictionary1, file_dictionary1, forwardIndex, invertedIndex);
 
-        for(auto itr = word_dictionary1.word_dict.begin(); itr != word_dictionary1.word_dict.end(); ++itr){
-            //checks to see if substring
-            bool substring = true;
-            //if substring and length greater than 1, then print out contents of inverted index entries
-            if((itr->second == input.substr(0, itr->second.size())) && itr->second.length() > 1) {
-                cout << itr->second << endl;
-                for(int j = 0; j < invertedIndex.ivs_idx[itr->first].second.size(); j++) {
-                    cout << "\tDocument: " << invertedIndex.ivs_idx[itr->first].second[j].doc
-                         << " freq: " << invertedIndex.ivs_idx[itr->first].second[j].freq << endl;
-                }
-            }
-        }
+        //indexer tokenizer
+        //one of the worst programming designs I've ever done. I'm sorry to those who see this
+        cout << "Tokenizing again for index" << endl;
+        tokenizer(files, docIn, word_dictionary1, file_dictionary1, forwardIndex, invertedIndex, true);
+
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<seconds>(stop - start);
+        cout << "Data processing time: " << duration.count() << endl;
+        cout << "Run again but press 1 to get the search" << endl;
     }
+    if(option == '1') {
+
+        //read in the files containing indexes and dictionaries
+        file_dictionary1.retrieve_dict();
+        word_dictionary1.retrieve_dict();
+        forwardIndex.retrive_dict();
+        invertedIndex.retrive_dict();
+
+        //begin query
+        cout << "Processing queries\n";
+        query_processor(file_dictionary1, word_dictionary1, forwardIndex, invertedIndex);
+    }
+
+
     return 0;
 }
