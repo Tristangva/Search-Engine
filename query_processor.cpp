@@ -30,13 +30,14 @@ void cosine_similarities(vector<string> terms, int topic, ofstream& fout,  int N
     string term;
     pair<float, int> scores[N] = {make_pair(scores->first = 0.0, scores->second = 0)};
     float length[N] = {0}; //length init
-    int K = 10, df, tf, curDoc;
-    float wftd, idf;
+    int K = 10, df, curDoc;
+    float wftd, idf, tf, idf2, tf2;
     //go through each list
     for (int t = 0; t < terms.size(); ++t) {
         term = terms[t];
         cout << term << endl;
-
+        idf2 = static_cast<float>(log10(terms.size()));
+        tf2 = 1.0/static_cast<float>(term.size());
         for (auto itr = word_dictionary.word_dict.begin(); itr != word_dictionary.word_dict.end(); ++itr) {
             if (term == itr->second) {
                 //auto itr2 = itr;
@@ -48,18 +49,20 @@ void cosine_similarities(vector<string> terms, int topic, ofstream& fout,  int N
 //                    cout << "\tDocument: " << invertedIndex.ivs_idx[itr->first].second[d].doc
 //                         << " freq: " << invertedIndex.ivs_idx[itr->first].second[d].freq << endl;
                     curDoc = invertedIndex.ivs_idx[itr->first].second[d].doc; //current doc id for array
-                            //cout << fileDictionary.file_dict.at(curDoc) << endl;
-                    if (invertedIndex.ivs_idx[itr->first].second[d].freq > 0) {
-                        wftd = static_cast<float>(1 + log10(invertedIndex.ivs_idx[itr->first].second[d].freq));
-                    } else {
-                        wftd = 0;
-                    }
+                    //cout << fileDictionary.file_dict.at(curDoc) << endl;
+//                    if (invertedIndex.ivs_idx[itr->first].second[d].freq > 0) {
+//                        wftd = static_cast<float>(1 + log10(invertedIndex.ivs_idx[itr->first].second[d].freq));
+//                    } else {
+//                        wftd = 0;
+//                    }
                     //tf = invertedIndex.ivs_idx[itr->first].second[d].freq;
-                    tf= 0;
-                    for (int i = 0; i < invertedIndex.ivs_idx[itr->first].second.size(); i++) {
-                        tf += invertedIndex.ivs_idx[itr->first].second[i].freq;
-                    }
-                    scores[curDoc].first+= (wftd* (tf*idf));
+                    // cout << invertedIndex.ivs_idx[itr->first].second[d].freq <<" " <<  forwardIndex.fwd_idx[curDoc].size() << endl;
+
+                    tf = static_cast<float > (invertedIndex.ivs_idx[itr->first].second[d].freq) /  static_cast<float >(forwardIndex.fwd_idx[curDoc].size());
+//                    for (int i = 0; i < invertedIndex.ivs_idx[itr->first].second.size(); i++) {
+//                        tf += invertedIndex.ivs_idx[itr->first].second[i].freq;
+//                    }
+                    scores[curDoc].first+= (tf2*idf2* (tf*idf));
 
                     //array for length
                     length[curDoc] = invertedIndex.ivs_idx[itr->first].second.size()*tf; //find length w/ normalization

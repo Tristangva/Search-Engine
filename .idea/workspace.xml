@@ -12,35 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70c264e6-9f72-450c-90a5-3823cd3f79ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/main.qrels" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/topics.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vsm_output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/file_dictionary.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/file_dictionary.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/indexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/indexer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/tokenizer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/tokenizer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/word_dictionary.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/word_dictionary.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CSCE4200_Project_3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CSCE4200_Project_3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CSCE4200_Project_3.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CSCE4200_Project_3.exe.stackdump" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_dict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file_dict.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/file_dictionary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_dictionary.h" beforeDir="false" afterPath="$PROJECT_DIR$/file_dictionary.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_paths.h" beforeDir="false" afterPath="$PROJECT_DIR$/file_paths.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_paths.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forward_index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/forward_index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/indexer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexer.h" beforeDir="false" afterPath="$PROJECT_DIR$/indexer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inverse_index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inverse_index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser_output.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/query_processor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/query_processor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/query_processor.h" beforeDir="false" afterPath="$PROJECT_DIR$/query_processor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word_dict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/word_dict.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word_dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/word_dictionary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word_dictionary.h" beforeDir="false" afterPath="$PROJECT_DIR$/word_dictionary.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vsm_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vsm_output.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +31,8 @@
       <file leaf-file-name="query_processor.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/query_processor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2686">
-              <caret line="243" column="21" selection-start-line="243" selection-start-column="4" selection-end-line="243" selection-end-column="21" />
+            <state relative-caret-position="265">
+              <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding>
                 <element signature="e#43#62#0" expanded="true" />
               </folding>
@@ -65,10 +40,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="topics.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/topics.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.qrels" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.qrels">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1377">
+              <caret line="796" column="17" lean-forward="true" selection-start-line="770" selection-end-line="796" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="1088">
               <caret line="64" column="63" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="63" />
               <folding>
                 <element signature="e#40#59#0" expanded="true" />
@@ -80,7 +73,7 @@
       <file leaf-file-name="query_processor.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/query_processor.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
+            <state relative-caret-position="663">
               <caret line="39" column="141" selection-start-line="39" selection-start-column="141" selection-end-line="39" selection-end-column="141" />
               <folding>
                 <element signature="e#133#150#0" expanded="true" />
@@ -92,7 +85,7 @@
       <file leaf-file-name="tokenizer.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tokenizer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-282">
+            <state relative-caret-position="3043">
               <caret line="179" column="17" selection-start-line="179" selection-start-column="17" selection-end-line="179" selection-end-column="17" />
               <folding>
                 <element signature="e#49#68#0" expanded="true" />
@@ -104,13 +97,13 @@
       <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Given files/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="1241">
               <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -185,9 +178,9 @@
         <option value="$PROJECT_DIR$/indexer.cpp" />
         <option value="$PROJECT_DIR$/query_processor.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/query_processor.cpp" />
         <option value="$PROJECT_DIR$/file_paths.h" />
         <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/query_processor.cpp" />
       </list>
     </option>
   </component>
@@ -345,7 +338,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263416000" />
+    <option name="totallyTimeSpent" value="264679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -359,7 +352,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49947312" weight="0.32897604" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32897604" />
@@ -372,30 +365,41 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49947312" weight="0.32897604" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.32897604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20547946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49947312" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49947312" weight="0.32897604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.32897604" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -658,15 +662,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2319">
           <caret line="187" column="50" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="1088">
           <caret line="64" column="63" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="63" />
           <folding>
             <element signature="e#40#59#0" expanded="true" />
@@ -674,26 +675,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/query_output.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/topics.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/query_processor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="243" column="21" selection-start-line="243" selection-start-column="4" selection-end-line="243" selection-end-column="21" />
-          <folding>
-            <element signature="e#43#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/query_output.txt" />
     <entry file="file://$PROJECT_DIR$/Given files/sample_output.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -702,20 +684,7 @@
         <state relative-caret-position="-49723" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file_paths.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.qrels">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5933">
-          <caret line="224" column="17" lean-forward="true" selection-start-line="190" selection-end-line="224" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/file_paths.txt" />
     <entry file="file://$PROJECT_DIR$/file_paths.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -725,14 +694,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Given files/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="1241">
           <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/query_processor.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
+        <state relative-caret-position="663">
           <caret line="39" column="141" selection-start-line="39" selection-start-column="141" selection-end-line="39" selection-end-column="141" />
           <folding>
             <element signature="e#133#150#0" expanded="true" />
@@ -742,7 +711,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tokenizer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-282">
+        <state relative-caret-position="3043">
           <caret line="179" column="17" selection-start-line="179" selection-start-column="17" selection-end-line="179" selection-end-column="17" />
           <folding>
             <element signature="e#49#68#0" expanded="true" />
@@ -754,6 +723,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/topics.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query_processor.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding>
+            <element signature="e#43#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.qrels">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="796" column="17" lean-forward="true" selection-start-line="770" selection-end-line="796" selection-end-column="17" />
         </state>
       </provider>
     </entry>
