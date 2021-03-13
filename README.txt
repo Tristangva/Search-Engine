@@ -2,6 +2,8 @@ Tristan White
 Contact: tristanwhite@my.unt.edu tristanwhite.gva@gmail.com Canvas
 
 NOTE: This program was created with CLION which is free with a .edu email
+      This project was also how it apeared when I turned it in as my final project for UNT CSCE 4200 in Fall 2020.
+      Querry search does not work
 
 To run:
 Put all files in zip in a directory. Keep folders in zip in folders and put them in dir.
