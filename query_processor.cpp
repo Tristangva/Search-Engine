@@ -188,42 +188,6 @@ void topics_file_reader(){
             query.emplace_back(numb, temp);
             temp.clear();
         }
-        //doesn't work
-//        if (line == narr) {
-//            cout << line << endl;
-//            getline(fin, line);
-//            cout << line << endl;
-//            if(line.empty()) {break;}
-//            cout << line << endl;
-//            getline(fin, line);
-//            cout << line << endl;
-//            getline(fin, line);
-//
-//            //cout << line << endl;
-//            istringstream find(line);
-//            while (!find.eof()) {
-//                getline(find, token, ' ');
-//                if((token != title)&& !token.empty()) {
-//                    token.erase(std::remove_if(token.begin(), token.end(),
-//                                               std::not1(std::ptr_fun((int (*)(int)) std::isalnum))), token.end());
-//                    token = toLowerCase(token);
-//                    check = false;
-//                    for (int i = 0; i < stop_words.size(); i++) {
-//                        if(token == stop_words[i]) {
-//                            check = true;
-//                            break;
-//                        }
-//                    }
-//                    if (!check) {
-//                        cout << token << endl;
-//                        token = stem_string(token);
-//                        cout << token << endl;
-//                        temp.push_back(token);
-//                    }
-//                }
-//            }
-//        }
-
     }
 }
 
