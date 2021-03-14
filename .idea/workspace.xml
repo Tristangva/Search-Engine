@@ -13,17 +13,22 @@
   <component name="ChangeListManager">
     <list default="true" id="70c264e6-9f72-450c-90a5-3823cd3f79ca" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/file_dictionary.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/file_dictionary.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/indexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/indexer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/query_processor.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/tokenizer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/tokenizer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/word_dictionary.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CSCE4200_Project_3.dir/word_dictionary.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CSCE4200_Project_3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CSCE4200_Project_3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CSCE4200_Project_3.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CSCE4200_Project_3.exe.stackdump" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_dict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file_dict.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forward_index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/forward_index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inverse_index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inverse_index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_dict.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_paths.h" beforeDir="false" afterPath="$PROJECT_DIR$/file_paths.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forward_index.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inverse_index.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/query_processor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/query_processor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vsm_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vsm_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word_dict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/word_dict.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stopwordlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Given files/stopwordlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Given files/topics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vsm_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/word_dict.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,16 +41,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file leaf-file-name="query_processor.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/query_processor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+            <state relative-caret-position="394">
+              <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
               <folding>
-                <element signature="e#40#59#0" expanded="true" />
+                <element signature="e#43#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="word_dict.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Data_Files/word_dict.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="tokenizer.cpp" pinned="false" current-in-tab="false">
@@ -63,17 +73,17 @@
       <file leaf-file-name="word_dictionary.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/word_dictionary.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="7">
               <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="word_dictionary.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="word_dictionary.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/word_dictionary.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+            <state relative-caret-position="476">
+              <caret line="28" selection-start-line="28" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -81,7 +91,7 @@
       <file leaf-file-name="file_dictionary.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file_dictionary.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="833">
               <caret line="49" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
@@ -91,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/file_paths.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -132,7 +142,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="new_word_dict" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -158,8 +168,8 @@
         <option value="$PROJECT_DIR$/indexer.cpp" />
         <option value="$PROJECT_DIR$/query_processor.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/file_paths.h" />
         <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/file_paths.h" />
         <option value="$PROJECT_DIR$/query_processor.cpp" />
       </list>
     </option>
@@ -184,7 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,12 +204,13 @@
             <path>
               <item name="CSCE4200_Project_3" type="b2602c69:ProjectViewProjectNode" />
               <item name="CSCE4200_Project_3" type="462c0819:PsiDirectoryNode" />
-              <item name="ft911" type="462c0819:PsiDirectoryNode" />
+              <item name="Data_Files" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,14 +218,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\White\Documents\CSCE4200_Project_3" />
-      <recent name="C:\Users\White\Documents\CSCE4200_Project_2\ft911" />
-      <recent name="C:\Users\White\Documents\CSCE4200_Project_2" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\White\Documents\CSCE4200_Project_3\ft911" />
       <recent name="C:\Users\White\Documents\CSCE4200_Project_2\ft911" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\White\Documents\CSCE4200_Project_3\Given files" />
+      <recent name="C:\Users\White\Documents\CSCE4200_Project_3" />
+      <recent name="C:\Users\White\Documents\CSCE4200_Project_2\ft911" />
+      <recent name="C:\Users\White\Documents\CSCE4200_Project_2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -294,6 +305,7 @@
       <workItem from="1607051002066" duration="998000" />
       <workItem from="1607052548800" duration="2603000" />
       <workItem from="1607099321928" duration="22008000" />
+      <workItem from="1615742101088" duration="3411000" />
     </task>
     <task id="LOCAL-00001" summary="6 docs work now">
       <created>1606447965850</created>
@@ -313,7 +325,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267172000" />
+    <option name="totallyTimeSpent" value="272390000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,54 +338,45 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49947312" weight="0.32897604" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18809272" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.32897604" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.32897604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20547946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49947312" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49947312" weight="0.32897604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.32897604" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -390,13 +393,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/word_dictionary.cpp</url>
-          <line>32</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="15" />
     </breakpoint-manager>
   </component>
@@ -430,7 +426,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/retriever.cpp" />
     <entry file="file://$PROJECT_DIR$/README" />
     <entry file="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/char_traits.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -489,7 +484,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stopwordlist.txt">
+    <entry file="file://$PROJECT_DIR$/Given files/stopwordlist.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/allocator.h">
@@ -604,13 +599,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/file_paths.txt" />
-    <entry file="file://$PROJECT_DIR$/topics.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/query_processor.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -635,10 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forward_index.txt">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.qrels">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
@@ -651,36 +635,9 @@
         <state relative-caret-position="-2499" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word_dict.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73134">
-          <caret line="4302" column="10" lean-forward="true" selection-start-line="4302" selection-start-column="10" selection-end-line="4302" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vsm_output.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inverse_index.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13639250">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/query_processor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
-          <folding>
-            <element signature="e#43#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
+        <state relative-caret-position="425">
           <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           <folding>
             <element signature="e#40#59#0" expanded="true" />
@@ -698,33 +655,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word_dictionary.cpp">
+    <entry file="file://$PROJECT_DIR$/word_dictionary.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file_dictionary.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
+        <state relative-caret-position="833">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inverse_index.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forward_index.txt">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word_dictionary.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Given files/topics.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file_paths.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word_dictionary.h">
+    <entry file="file://$PROJECT_DIR$/query_processor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="394">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding>
+            <element signature="e#43#62#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vsm_output.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word_dict.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73134">
+          <caret line="4302" column="10" lean-forward="true" selection-start-line="4302" selection-start-column="10" selection-end-line="4302" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Files/word_dict.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
