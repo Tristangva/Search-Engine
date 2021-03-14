@@ -2,6 +2,8 @@ Tristan White
 Contact: tristanwhite@my.unt.edu tristanwhite.gva@gmail.com Canvas
 
 NOTE: This program was created with CLION which is free with a .edu email
+      At the moment, this is an exact copy of what was turned in for CSCE 4200 Fall 2020. 
+      An updated personal version will be added later
 
 To run:
 Put all files in zip in a directory. Keep folders in zip in folders and put them in dir.
