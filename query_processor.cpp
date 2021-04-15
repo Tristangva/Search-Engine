@@ -24,59 +24,68 @@ void print_queries() {
 }
 
 //cosine similarity algotithm from book
+//https://nlp.stanford.edu/IR-book/pdf/06vect.pdf
 void cosine_similarities(vector<string> terms, int topic, ofstream& fout,  int N, inverted_index invertedIndex, forward_index forwardIndex, file_dictionary fileDictionary, word_dictionary word_dictionary) {
 
     vector<int> str_lengths;
     string term;
     pair<float, int> scores[N] = {make_pair(scores->first = 0.0, scores->second = 0)};
     float length[N] = {0}; //length init
-    int K = 10, df, curDoc;
-    float wftd, idf, tf, idf2, tf2;
+    int K = 10, df = 0, curDoc, temp;
+    float wftd, wfqd, idf, tfq, tfd;
     //go through each list
 
     //idf-tf
     //tf term t in document d
     //tf = count of t / words in d
     for (int t = 0; t < terms.size(); ++t) {
-        term = terms[t];
-        cout << term << endl;
-        idf2 = static_cast<float>(log10(terms.size()));
-        tf2 = 1.0/static_cast<float>(term.size());
+        term = terms[t]; //terms for easier coding
+        auto postings_list = word_dictionary.word_dict.begin(); //idk it wanted me to initalize like this
+        //find word frequency by finding amount of inverse index entries for term
         for (auto itr = word_dictionary.word_dict.begin(); itr != word_dictionary.word_dict.end(); ++itr) {
             if (term == itr->second) {
-                //auto itr2 = itr;
+                postings_list = itr;
                 df = static_cast<int>(invertedIndex.ivs_idx[itr->first].second.size()); // temrs / words in doc doesn't include freq
-                idf = static_cast<float>(log10(N / df)); //idf for term
-                //cout << itr->second << endl;
-                for (int d = 0; d < invertedIndex.ivs_idx[itr->first].second.size(); d++) {
-
-//                    cout << "\tDocument: " << invertedIndex.ivs_idx[itr->first].second[d].doc
-//                         << " freq: " << invertedIndex.ivs_idx[itr->first].second[d].freq << endl;
-                    curDoc = invertedIndex.ivs_idx[itr->first].second[d].doc; //current doc id for array
-                    //cout << fileDictionary.file_dict.at(curDoc) << endl;
-//                    if (invertedIndex.ivs_idx[itr->first].second[d].freq > 0) {
-//                        wftd = static_cast<float>(1 + log10(invertedIndex.ivs_idx[itr->first].second[d].freq));
-//                    } else {
-//                        wftd = 0;
-//                    }
-                    //tf = invertedIndex.ivs_idx[itr->first].second[d].freq;
-                    // cout << invertedIndex.ivs_idx[itr->first].second[d].freq <<" " <<  forwardIndex.fwd_idx[curDoc].size() << endl;
-
-                    tf = static_cast<float > (invertedIndex.ivs_idx[itr->first].second[d].freq) /  static_cast<float >(forwardIndex.fwd_idx[curDoc].size());
-//                    for (int i = 0; i < invertedIndex.ivs_idx[itr->first].second.size(); i++) {
-//                        tf += invertedIndex.ivs_idx[itr->first].second[i].freq;
-//                    }
-                    scores[curDoc].first+= (tf2*idf2* (tf*idf));
-
-                    //array for length
-                    length[curDoc] = invertedIndex.ivs_idx[itr->first].second.size()*tf; //find length w/ normalization
-                    scores[curDoc].first = scores[curDoc].first / length[curDoc]; //score
-                    scores[curDoc].second = invertedIndex.ivs_idx[itr->first].second[d].doc; //doc id
-
-                }
-                break; //break as needed data found
+                break; //exit loop to save time
             }
         }
+        //idf found
+        idf = static_cast<float>(log10(N / df));
+
+        //tf found
+        temp = 0;
+        for(int i = 0; i < terms.size(); i++){
+            if(term == terms[i]) {
+                temp++;
+            }
+        }
+
+        tfq = static_cast<float>(temp) / (terms.size()); //amount of times term in query / query size
+        wfqd = tfq*idf; //for query
+        for (int d = 0; d < invertedIndex.ivs_idx[postings_list->first].second.size(); d++) {
+            temp = 0;
+            curDoc = invertedIndex.ivs_idx[postings_list->first].second[d].doc; //current doc id for array
+            //if term save freq in temp and add to doc size
+            //Current doc id used for forward index
+            for (int i = 0; i < forwardIndex.fwd_idx[curDoc].size(); i++) {
+                temp += forwardIndex.fwd_idx[curDoc][i].word_freq;
+            }
+            //find tf for doc
+            tfd = static_cast<float > (invertedIndex.ivs_idx[postings_list->first].second[d].freq) / static_cast<float > (temp);
+            //tf-idf for doc
+            wftd = tfd*idf;
+
+            //wftd X wfqd to count array at curDoc
+            scores[curDoc].first+= (wftd * wfqd);
+
+            //array for length
+            length[curDoc] = invertedIndex.ivs_idx[postings_list->first].second.size()*tfd; //find length w/ normalization
+            scores[curDoc].first = scores[curDoc].first / length[curDoc]; //score
+            scores[curDoc].second = invertedIndex.ivs_idx[postings_list->first].second[d].doc; //doc id
+
+        }
+        //score / length
+
     }
     //return top scores and print them
     if(!terms.empty()) { //i have no idea why I need this if statement
@@ -154,7 +163,7 @@ void topics_file_reader(){
             }
             if(option == 1) {
                 sort(temp.begin(), temp.end());
-                temp.erase(unique(temp.begin(), temp.end()), temp.end());
+//                temp.erase(unique(temp.begin(), temp.end()), temp.end());
                 query.emplace_back(numb, temp);
                 temp.clear();
             }
@@ -188,7 +197,7 @@ void topics_file_reader(){
                 }
             }
             sort(temp.begin(), temp.end());
-            temp.erase(unique(temp.begin(), temp.end()), temp.end());
+//            temp.erase(unique(temp.begin(), temp.end()), temp.end());
             query.emplace_back(numb, temp);
             temp.clear();
         }
@@ -213,6 +222,7 @@ void query_processor(file_dictionary fileDictionary, word_dictionary word_dictio
     }
 
     topics_file_reader();
+    cout << "check" << endl;
     fout.open(paths.query_output);
     for (int i = 0; i < query.size(); ++i) {
         cout << "\nTopic: " << query.at(i).first << endl;
