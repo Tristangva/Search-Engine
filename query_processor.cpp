@@ -70,8 +70,10 @@ void cosine_similarities(vector<string> terms, int topic, ofstream& fout,  int N
             for (int i = 0; i < forwardIndex.fwd_idx[curDoc].size(); i++) {
                 temp += forwardIndex.fwd_idx[curDoc][i].word_freq;
             }
+            //cout << temp << endl;
             //find tf for doc
-            tfd = static_cast<float > (invertedIndex.ivs_idx[postings_list->first].second[d].freq) / static_cast<float > (temp);
+            tfd = static_cast<float>(1 + log10(temp));
+                    //static_cast<float > (invertedIndex.ivs_idx[postings_list->first].second[d].freq) / static_cast<float > (temp);
             //tf-idf for doc
             wftd = tfd*idf;
 
@@ -80,13 +82,15 @@ void cosine_similarities(vector<string> terms, int topic, ofstream& fout,  int N
 
             //array for length
             length[curDoc] = invertedIndex.ivs_idx[postings_list->first].second.size()*tfd; //find length w/ normalization
-            scores[curDoc].first = scores[curDoc].first / length[curDoc]; //score
+            scores[curDoc].first  /= length[curDoc]; //score
             scores[curDoc].second = invertedIndex.ivs_idx[postings_list->first].second[d].doc; //doc id
 
         }
         //score / length
 
     }
+    //calculate scores/lengths
+
     //return top scores and print them
     if(!terms.empty()) { //i have no idea why I need this if statement
         sort(scores, scores + N);
