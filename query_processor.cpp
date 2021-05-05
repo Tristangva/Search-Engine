@@ -25,32 +25,39 @@ void print_queries() {
 
 //cosine similarity algotithm from book
 //https://nlp.stanford.edu/IR-book/pdf/06vect.pdf
+//and
+//https://github.com/Sam-Si/Vector-Space-Model-aka-TF-IDF
 void cosine_similarities(vector<string> terms, int topic, ofstream& fout,  int N, inverted_index invertedIndex, forward_index forwardIndex, file_dictionary fileDictionary, word_dictionary word_dictionary) {
 
     vector<int> str_lengths;
     string term;
-    pair<float, int> scores[N] = {make_pair(scores->first = 0.0, scores->second = 0)};
-    float length[N] = {0}; //length init
-    int K = 10, df = 0, curDoc, temp;
-    float wftd, wfqd, idf, tfq, tfd;
+    pair<double, int> scores[N] = {make_pair(scores->first = 0.0, scores->second = 0)};
+    double length[N] = {0}; //length init
+    int K = 10, df = 0, curDoc = 0, temp, query_term_id = 0;
+    double wftd, wfqd, idf, tfq, tfd;
     //go through each list
 
     //idf-tf
     //tf term t in document d
     //tf = count of t / words in d
     for (int t = 0; t < terms.size(); ++t) {
+        double n_q = 0;
+        double n_d = 0;
+        double check = 0;
         term = terms[t]; //terms for easier coding
         auto postings_list = word_dictionary.word_dict.begin(); //idk it wanted me to initalize like this
         //find word frequency by finding amount of inverse index entries for term
         for (auto itr = word_dictionary.word_dict.begin(); itr != word_dictionary.word_dict.end(); ++itr) {
             if (term == itr->second) {
                 postings_list = itr;
-                df = static_cast<int>(invertedIndex.ivs_idx[itr->first].second.size()); // temrs / words in doc doesn't include freq
+                //number of docs the term appears in.
+                df = static_cast<int>(invertedIndex.ivs_idx[postings_list->first].second.size()); // temrs / words in doc doesn't include freq
+                query_term_id = postings_list->first;
                 break; //exit loop to save time
             }
         }
         //idf found
-        idf = static_cast<float>(log10(N / df));
+        idf = log10(N / df);
 
         //tf found
         temp = 0;
@@ -59,33 +66,55 @@ void cosine_similarities(vector<string> terms, int topic, ofstream& fout,  int N
                 temp++;
             }
         }
+        wfqd = (temp > 0) ? (1 + log10(temp)) : 0;
 
-        tfq = static_cast<float>(temp) / (terms.size()); //amount of times term in query / query size
-        wfqd = tfq*idf; //for query
+        //tfq = static_cast<float>(temp) / (terms.size()); //amount of times term in query / query size
+        //wfqd = tfq*idf; //for query
         for (int d = 0; d < invertedIndex.ivs_idx[postings_list->first].second.size(); d++) {
             temp = 0;
             curDoc = invertedIndex.ivs_idx[postings_list->first].second[d].doc; //current doc id for array
             //if term save freq in temp and add to doc size
             //Current doc id used for forward index
+                    //cout << "Current: " << curDoc << endl;
             for (int i = 0; i < forwardIndex.fwd_idx[curDoc].size(); i++) {
-                temp += forwardIndex.fwd_idx[curDoc][i].word_freq;
+                if(query_term_id ==  forwardIndex.fwd_idx[curDoc][i].word) {
+                    //cout << forwardIndex.fwd_idx[curDoc][i].word << " " << forwardIndex.fwd_idx[curDoc][i].word_freq << endl;
+                    temp = forwardIndex.fwd_idx[curDoc][i].word_freq;
+                    //cout << "Break" << endl;
+                } else {
+                    length[curDoc] += forwardIndex.fwd_idx[curDoc][i].word_freq;
+                    check = length[curDoc];
+                }
+
             }
+            //cout << "Freq: " << temp << " " << length[curDoc] << endl;
             //find tf for doc
-            tfd = static_cast<float > (invertedIndex.ivs_idx[postings_list->first].second[d].freq) / static_cast<float > (temp);
+            tfd = (1 + log10(temp));
+                    //static_cast<float > (invertedIndex.ivs_idx[postings_list->first].second[d].freq) / static_cast<float > (temp);
             //tf-idf for doc
             wftd = tfd*idf;
+            temp = 0;
 
             //wftd X wfqd to count array at curDoc
-            scores[curDoc].first+= (wftd * wfqd);
+            temp+= (wftd * wfqd);
+            wfqd *= wfqd;
+            wftd *= wftd;
+            n_d +=wftd;
+            n_q+= wfqd;
 
             //array for length
-            length[curDoc] = invertedIndex.ivs_idx[postings_list->first].second.size()*tfd; //find length w/ normalization
-            scores[curDoc].first = scores[curDoc].first / length[curDoc]; //score
-            scores[curDoc].second = invertedIndex.ivs_idx[postings_list->first].second[d].doc; //doc id
-
+            //length[curDoc] = invertedIndex.ivs_idx[postings_list->first].second.size()*tfd; //find length w/ normalization
+            scores[curDoc].first = temp / (sqrt(n_d) * sqrt(n_q));
+            //scores[curDoc].second = invertedIndex.ivs_idx[postings_list->first].second[d].doc; //doc id
         }
+
         //score / length
 
+    }
+    //calculate scores/lengths
+    for (int i = 0; i < N; ++i) {
+        scores[i].first /= length[i];
+        scores[i].second = i;
     }
     //return top scores and print them
     if(!terms.empty()) { //i have no idea why I need this if statement
@@ -109,11 +138,11 @@ void topics_file_reader(){
     string line, num = "<num> Number:", title = "<title>", desc = "<desc> Description: ", narr = "<narr> Narrative:", token;
     vector<string> stop_words;
     bool check;
-    int option;
+    int option = 1;
     ifstream fin, stops;
     fin.open(files.topics_list);
     cout << "Setting:\n1 for just title\n2 for title and desc" << endl;
-    cin >> option;
+    //cin >> option;
     //parse file
     stops.open(paths.stop_word_list);
     while (stops >> line) {
@@ -151,9 +180,9 @@ void topics_file_reader(){
                             }
                         }
                         if (!check) {
-                            cout << token << endl;
+                            //cout << token << endl;
                             token = stem_string(token);
-                            cout << token << endl;
+                            //cout << token << endl;
                             temp.push_back(token);
                         }
                     }
@@ -168,39 +197,39 @@ void topics_file_reader(){
                 temp.clear();
             }
         }
-        if(line == desc && option == 2) {
-            while(!fin.eof()) {
-                getline(fin, line);
-                if(line.empty()) {break;}
-                //cout << line << endl;
-                istringstream find(line);
-                while (!find.eof()) {
-                    getline(find, token, ' ');
-                    if((token != title)&& !token.empty()) {
-                        token.erase(std::remove_if(token.begin(), token.end(),
-                                                   std::not1(std::ptr_fun((int (*)(int)) std::isalnum))), token.end());
-                        token = toLowerCase(token);
-                        check = false;
-                        for (int i = 0; i < stop_words.size(); i++) {
-                            if(token == stop_words[i]) {
-                                check = true;
-                                break;
-                            }
-                        }
-                        if (!check) {
-                            cout << token << endl;
-                            token = stem_string(token);
-                            cout << token << endl;
-                            temp.push_back(token);
-                        }
-                    }
-                }
-            }
-            sort(temp.begin(), temp.end());
-//            temp.erase(unique(temp.begin(), temp.end()), temp.end());
-            query.emplace_back(numb, temp);
-            temp.clear();
-        }
+//        if(line == desc && option == 2) {
+//            while(!fin.eof()) {
+//                getline(fin, line);
+//                if(line.empty()) {break;}
+//                //cout << line << endl;
+//                istringstream find(line);
+//                while (!find.eof()) {
+//                    getline(find, token, ' ');
+//                    if((token != title)&& !token.empty()) {
+//                        token.erase(std::remove_if(token.begin(), token.end(),
+//                                                   std::not1(std::ptr_fun((int (*)(int)) std::isalnum))), token.end());
+//                        token = toLowerCase(token);
+//                        check = false;
+//                        for (int i = 0; i < stop_words.size(); i++) {
+//                            if(token == stop_words[i]) {
+//                                check = true;
+//                                break;
+//                            }
+//                        }
+//                        if (!check) {
+//                            //cout << token << endl;
+//                            token = stem_string(token);
+//                            //cout << token << endl;
+//                            temp.push_back(token);
+//                        }
+//                    }
+//                }
+//            }
+//            sort(temp.begin(), temp.end());
+////            temp.erase(unique(temp.begin(), temp.end()), temp.end());
+//            query.emplace_back(numb, temp);
+//            temp.clear();
+//        }
     }
 }
 
@@ -222,7 +251,6 @@ void query_processor(file_dictionary fileDictionary, word_dictionary word_dictio
     }
 
     topics_file_reader();
-    cout << "check" << endl;
     fout.open(paths.query_output);
     for (int i = 0; i < query.size(); ++i) {
         cout << "\nTopic: " << query.at(i).first << endl;

@@ -23,7 +23,7 @@ namespace fs = experimental::filesystem;
 using namespace std::chrono;
 
 
-int main() {
+int main(int argc, char *argv[]) {
     //Enter path containing directory with to be parsed files
     //string path = "C:/Users/White/Documents/CSCE4200_Project_2/ft911/"; //path to directory
     input_files paths; //file path structs

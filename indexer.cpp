@@ -92,9 +92,9 @@ void forward_index::retrive_dict() {
                     }
 
                     freq = token;
-
-                    new_word.word = stoi(word);
-                    new_word.word_freq = stoi(freq);
+                    // logic in my programming caused values to flip. Idk why. I'll check later
+                    new_word.word = stoi(freq);
+                    new_word.word_freq = stoi(word);
                     temp.push_back(new_word);
 
                 }
